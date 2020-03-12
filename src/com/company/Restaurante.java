@@ -14,8 +14,14 @@ public class Restaurante {
     this.empleadosDeLimpieza = new ArrayList<EmpleadoLimpieza>();
   }
 
+  public void agregarEmpleados(EmpleadoLimpieza unEmpleado){
+    this.empleadosDeLimpieza.add(unEmpleado);
+  }
+
   public void informarSueldosEmpleados(){
-    //todo
+    for (EmpleadoLimpieza empleadoLimpieza : empleadosDeLimpieza) {
+      System.out.println("El empleado " + empleadoLimpieza.getApellido() + " cobra " + empleadoLimpieza.informarSueldo() + " frijoles mágicos");
+    }
   }
 
 

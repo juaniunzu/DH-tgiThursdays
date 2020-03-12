@@ -15,12 +15,22 @@ public class EmpleadoLimpiezaVajilla extends EmpleadoLimpieza {
   }
 
   public void romperVajilla(Rompible unRompible){
-    //todo
+    unRompible.romper();
+    this.vajillaRota.add(unRompible);
   }
+
+  private Integer descuentoPorRomper(){
+    int descuentoPorRomper = 0;
+    descuentoPorRomper = vajillaRota.size() * 5;
+    return descuentoPorRomper;
+  }
+
 
   @Override
   public Double informarSueldo() {
-    //todo
-    return 0.0;
+    Double sueldoACobrarConDescuento = 0.0;
+    sueldoACobrarConDescuento = this.sueldo - descuentoPorRomper();
+    return sueldoACobrarConDescuento;
+
   }
 }

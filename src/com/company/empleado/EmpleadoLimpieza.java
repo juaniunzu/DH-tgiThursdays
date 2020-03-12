@@ -15,8 +15,7 @@ public abstract class EmpleadoLimpieza {
   }
 
   public Double informarSueldo(){
-    //todo
-    return 0.0;
+    return this.sueldo;
   }
 
   public String getNombre() {

@@ -10,6 +10,6 @@ public class Taza extends Vajilla implements Rompible {
 
   @Override
   public void romper() {
-    //todo
+    System.out.println("uy, acabo de romper una taza");
   }
 }
